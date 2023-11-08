@@ -93,10 +93,10 @@ useEffect(() => {
   return (
     <div className='ui container'>
       <div className='ui card centered'> <h2 className='ui center'>CONTACT MANAGER</h2></div>
-   <BrowserRouter basename="/crud-react">
+   
     <Router>  
      <Switch>
-      <Route path='/crud-react' exact render={ (props) => (<ContactList {...props} contacts={searchTerm.length < 1 ? contacts : searchResults} getContactId = {removeContactHandler } 
+      <Route path='/' exact render={ (props) => (<ContactList {...props} contacts={searchTerm.length < 1 ? contacts : searchResults} getContactId = {removeContactHandler } 
       term = {searchTerm}  
       searchKeyword = {searchHandler} /> )}  />
       <Route path='/add' render={ (props) => (<AddContact {...props} addContactHandler={addContactHandler} />)}   />
@@ -108,7 +108,7 @@ useEffect(() => {
 
       </Switch>
     </Router>
-    </BrowserRouter> 
+    
           
      {/*<AddContact addContactHandler={addContactHandler} />
      <ContactList contacts ={contacts} getContactId = {removeContactHandler } /> {/*ssdfdsf*/}
